@@ -1,0 +1,105 @@
+Inline comment:	// This is a simple test file for the lexical analyzer
+Keyword:	public
+Keyword:	class
+Identifier:	InputTest
+Delimiter:	{
+Keyword:	public
+Keyword:	static
+Keyword:	void
+Identifier:	main
+Delimiter:	(
+Identifier:	String
+Identifier:	args
+Delimiter:	)
+Delimiter:	{
+Inline comment:	// Variables declaration
+Keyword:	int
+Identifier:	a
+Operator:	=
+Integer:	5
+Delimiter:	;
+Keyword:	double
+Identifier:	b
+Operator:	=
+Float:	10.75
+Delimiter:	;
+Identifier:	String
+Identifier:	message
+Operator:	=
+String Literal:	"Hello, world!"
+Delimiter:	;
+Inline comment:	// A condition with a comparison operator
+Keyword:	if
+Delimiter:	(
+Identifier:	a
+Operator:	<
+Identifier:	b
+Delimiter:	)
+Delimiter:	{
+Identifier:	System
+Delimiter:	.
+Identifier:	out
+Delimiter:	.
+Identifier:	println
+Delimiter:	(
+Identifier:	message
+Delimiter:	)
+Delimiter:	;
+Delimiter:	}
+Multiline comment:	/*
+Multiline comment:	multiline
+Multiline comment:	comment
+Multiline comment:	with
+Multiline comment:	single
+Multiline comment:	line
+Multiline comment:	*/
+Keyword:	int
+Identifier:	result
+Operator:	=
+Identifier:	a
+Operator:	+
+Integer:	10
+Delimiter:	;
+Multiline comment:	/*
+Multiline comment:	Multiline
+Multiline comment:	comment
+Multiline comment:	with
+Multiline comment:	a
+Multiline comment:	couple
+Multiline comment:	of
+Multiline comment:	text
+Multiline comment:	lines
+Multiline comment:	*/
+Keyword:	char
+Identifier:	symbol
+Operator:	=
+Character Literal:	'A'
+Delimiter:	;
+Keyword:	for
+Delimiter:	(
+Keyword:	int
+Identifier:	i
+Operator:	=
+Integer:	0
+Delimiter:	;
+Identifier:	i
+Operator:	<
+Integer:	10
+Delimiter:	;
+Identifier:	i
+Operator:	+
+Operator:	+
+Delimiter:	)
+Delimiter:	{
+Identifier:	System
+Delimiter:	.
+Identifier:	out
+Delimiter:	.
+Identifier:	println
+Delimiter:	(
+Identifier:	i
+Delimiter:	)
+Delimiter:	;
+Delimiter:	}
+Delimiter:	}
+Delimiter:	}

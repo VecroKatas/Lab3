@@ -1,0 +1,224 @@
+Keyword:	import
+Identifier:	java
+Delimiter:	.
+Identifier:	io
+Delimiter:	.
+Identifier:	FileWriter
+Delimiter:	;
+Keyword:	import
+Identifier:	java
+Delimiter:	.
+Identifier:	io
+Delimiter:	.
+Identifier:	IOException
+Delimiter:	;
+Keyword:	public
+Keyword:	class
+Identifier:	LexicalAnalyzerTest
+Delimiter:	{
+Keyword:	public
+Keyword:	static
+Keyword:	void
+Identifier:	main
+Delimiter:	(
+Identifier:	String
+Identifier:	args
+Delimiter:	)
+Delimiter:	{
+Inline comment:	// The path to the file with the input Java code to analyze
+Identifier:	String
+Identifier:	inputFilePath
+Operator:	=
+String Literal:	"testCode.java"
+Delimiter:	;
+Inline comment:	// The path to the file for recording the analysis results
+Identifier:	String
+Identifier:	outputFilePath
+Operator:	=
+String Literal:	"analysisOutput.txt"
+Delimiter:	;
+Inline comment:	// Creating a test file with Java code
+Identifier:	createTestFile
+Delimiter:	(
+Identifier:	inputFilePath
+Delimiter:	)
+Delimiter:	;
+Inline comment:	// Call the lexical analyzer and pass it the input file and the result file
+Identifier:	LexicalAnalyzer
+Identifier:	analyzer
+Operator:	=
+Keyword:	new
+Identifier:	LexicalAnalyzer
+Delimiter:	(
+Delimiter:	)
+Delimiter:	;
+Keyword:	try
+Delimiter:	{
+Identifier:	analyzer
+Delimiter:	.
+Identifier:	analyze
+Delimiter:	(
+Identifier:	inputFilePath
+Delimiter:	,
+Identifier:	outputFilePath
+Delimiter:	)
+Delimiter:	;
+Identifier:	System
+Delimiter:	.
+Identifier:	out
+Delimiter:	.
+Identifier:	println
+Delimiter:	(
+String Literal:	"The analysis is complete. The results are recorded in"
+Operator:	+
+Identifier:	outputFilePath
+Delimiter:	)
+Delimiter:	;
+Delimiter:	}
+Keyword:	catch
+Delimiter:	(
+Identifier:	IOException
+Identifier:	e
+Delimiter:	)
+Delimiter:	{
+Identifier:	e
+Delimiter:	.
+Identifier:	printStackTrace
+Delimiter:	(
+Delimiter:	)
+Delimiter:	;
+Delimiter:	}
+Delimiter:	}
+Inline comment:	// A method for creating a test Java file
+Keyword:	private
+Keyword:	static
+Keyword:	void
+Identifier:	createTestFile
+Delimiter:	(
+Identifier:	String
+Identifier:	filePath
+Delimiter:	)
+Delimiter:	{
+Keyword:	try
+Delimiter:	(
+Identifier:	FileWriter
+Identifier:	writer
+Operator:	=
+Keyword:	new
+Identifier:	FileWriter
+Delimiter:	(
+Identifier:	filePath
+Delimiter:	)
+Delimiter:	)
+Delimiter:	{
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"// This is a test class for testing the lexical analyzer\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"public class TestClass {\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"    public static void main(String[] args) {\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"        int a = 10;\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"        double b = 3.14;\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"        String str = \"
+Identifier:	Hello
+Delimiter:	,
+Identifier:	world
+Operator:	!
+String Literal:	";\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"        if (a < 20) {\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"            System.out.println(str);\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"        }\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"    }\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	writer
+Delimiter:	.
+Identifier:	write
+Delimiter:	(
+String Literal:	"}\n"
+Delimiter:	)
+Delimiter:	;
+Identifier:	System
+Delimiter:	.
+Identifier:	out
+Delimiter:	.
+Identifier:	println
+Delimiter:	(
+String Literal:	"Test file "
+Operator:	+
+Identifier:	filePath
+Operator:	+
+String Literal:	" is created."
+Delimiter:	)
+Delimiter:	;
+Delimiter:	}
+Keyword:	catch
+Delimiter:	(
+Identifier:	IOException
+Identifier:	e
+Delimiter:	)
+Delimiter:	{
+Identifier:	e
+Delimiter:	.
+Identifier:	printStackTrace
+Delimiter:	(
+Delimiter:	)
+Delimiter:	;
+Delimiter:	}
+Delimiter:	}
+Delimiter:	}
