@@ -46,30 +46,17 @@ Identifier:	message
 Delimiter:	)
 Delimiter:	;
 Delimiter:	}
-Multiline comment:	/*
-Multiline comment:	multiline
-Multiline comment:	comment
-Multiline comment:	with
-Multiline comment:	single
-Multiline comment:	line
-Multiline comment:	*/
+Multiline comment:	 /* multiline comment with single line */
 Keyword:	int
 Identifier:	result
 Operator:	=
 Identifier:	a
 Operator:	+
-Integer:	10
+Invalid Hexadecimal:	0x73A
+Operator:	+
+Invalid Hexadecimal:	0x12Z
 Delimiter:	;
-Multiline comment:	/*
-Multiline comment:	Multiline
-Multiline comment:	comment
-Multiline comment:	with
-Multiline comment:	a
-Multiline comment:	couple
-Multiline comment:	of
-Multiline comment:	text
-Multiline comment:	lines
-Multiline comment:	*/
+Multiline comment:	 /* Multiline comment with a couple of text lines */
 Keyword:	char
 Identifier:	symbol
 Operator:	=

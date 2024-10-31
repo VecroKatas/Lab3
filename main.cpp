@@ -55,6 +55,8 @@ string ClassifyToken(string &token) {
                 return "Integer";
             } else if (regex_match(token, regex("[0-9]*\\.[0-9]+"))) {
                 return "Float";
+            } else if (regex_match(token, regex("0[xX][0-9a-zA-Z]+"))) {
+                return "Invalid Hexadecimal";
             } else if (regex_match(token, regex("0[xX][0-9a-fA-F]+"))) {
                 return "Hexadecimal";
             }
@@ -95,14 +97,26 @@ void LexicalAnalysis(string &inputFileName, string &outputFileName) {
     }
 
     string line;
-    regex tokenRegex("/\\*|\\*/|//.*|\".*?\"|'.'|[a-zA-Z_][a-zA-Z0-9_]*|[0-9]*\\.[0-9]+|[0-9]+|0[xX][0-9a-fA-F]+|[+\\-*/%=!&|<>]=?|[(){},.;]");
+    string resultStr;
+    regex tokenRegex("/\\*|\\*/|//.*|\".*?\"|'.'|[a-zA-Z_][a-zA-Z0-9_]*|0[xX][0-9a-zA-Z]+|0[xX][0-9a-fA-F]+|[0-9]*\\.[0-9]+|[0-9]+|[+\\-*/%=!&|<>]=?|[(){},.;]");
     while (getline(inputFile, line)) {
         auto tokensBegin = sregex_iterator(line.begin(), line.end(), tokenRegex);
         auto tokensEnd = sregex_iterator();
 
         for (sregex_iterator it = tokensBegin; it != tokensEnd; it++) {
             string token = it->str();
-            outputFile << ClassifyToken(token) << ":\t" << token << endl;
+            auto result = ClassifyToken(token);
+            if (result == "Multiline comment"){
+                resultStr.append(" " + token);
+            }
+            else if (!resultStr.empty()){
+                outputFile << "Multiline comment" << ":\t" << resultStr << endl;
+                resultStr = "";
+            }
+
+            if (result != "Multiline comment"){
+                outputFile << ClassifyToken(token) << ":\t" << token << endl;
+            }
         }
     }
 

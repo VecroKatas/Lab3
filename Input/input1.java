@@ -12,7 +12,7 @@ public class InputTest {
             System.out.println(message);
         }
         /* multiline comment with single line */
-        int result = a + 10;
+        int result = a + 0x73A + 0x12Z;
 
         /* Multiline comment
            with a couple of text lines */
